@@ -18,7 +18,7 @@ class CustomDivider extends StatelessWidget {
           height: 1,
           width: 130,
         ),
-        Text('ó'),
+        const Text('ó'),
         Container(
           margin: const EdgeInsets.only(
             left: 10,

@@ -40,6 +40,7 @@ class LogInScreen extends StatelessWidget {
             ForgotPasswordText(),
             PrimaryCustomButton(
               text: 'Ingresar',
+              onPressed: () {},
             ),
             CustomDivider(),
             SecondaryCustomButton(

@@ -11,15 +11,15 @@ class ReferenceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CustomBottomNavBar(),
+      bottomNavigationBar: const CustomBottomNavbar(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: const [
               TandamosLogo(),
               Padding(
-                padding: const EdgeInsets.only(
+                padding: EdgeInsets.only(
                   top: 40,
                   left: 30,
                   right: 20,
@@ -34,7 +34,7 @@ class ReferenceScreen extends StatelessWidget {
               ),
               BannerRecommendUs(),
               Padding(
-                padding: const EdgeInsets.only(
+                padding: EdgeInsets.only(
                   top: 10,
                   left: 30,
                   right: 20,
@@ -48,7 +48,7 @@ class ReferenceScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(
+                padding: EdgeInsets.only(
                   top: 40,
                   left: 30,
                 ),
@@ -60,7 +60,7 @@ class ReferenceScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(
+                padding: EdgeInsets.only(
                   left: 30,
                   bottom: 10,
                 ),
@@ -73,7 +73,7 @@ class ReferenceScreen extends StatelessWidget {
               ),
               FriendsToJoin(),
               Padding(
-                padding: const EdgeInsets.only(
+                padding: EdgeInsets.only(
                   top: 40,
                   left: 30,
                 ),
@@ -85,7 +85,7 @@ class ReferenceScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(
+                padding: EdgeInsets.only(
                   top: 20,
                   left: 30,
                 ),
@@ -116,7 +116,7 @@ class FriendsToJoin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
+      children: const [
         FriendItem(
           name: 'Carmen',
         ),

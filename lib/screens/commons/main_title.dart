@@ -16,7 +16,7 @@ class MainTitle extends StatelessWidget {
       ),
       child: Text(
         title,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 32,
         ),
       ),

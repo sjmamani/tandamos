@@ -24,14 +24,14 @@ class SwitchText extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(text),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           GestureDetector(
             onTap: navigateTo,
             child: Text(
               linkedText,
-              style: TextStyle(
+              style: const TextStyle(
                 color: primaryColor,
                 fontWeight: FontWeight.bold,
                 decoration: TextDecoration.underline,

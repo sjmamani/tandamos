@@ -21,7 +21,7 @@ class CustomTextField extends StatelessWidget {
       ),
       child: TextField(
         decoration: InputDecoration(
-          focusedBorder: UnderlineInputBorder(
+          focusedBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: primaryColor),
           ),
           hintText: hintText,

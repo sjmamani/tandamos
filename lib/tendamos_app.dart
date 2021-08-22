@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/screens/log_in/log_in_screen.dart';
-import 'package:tandamos/screens/reference/reference_screen.dart';
+import 'package:tandamos/screens/user_dashboard/user_dashboard_screen.dart';
 import 'package:tandamos/util/colors.dart';
 
 class TendamosApp extends StatelessWidget {
@@ -11,8 +10,7 @@ class TendamosApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: primaryColor,
       ),
-      // home: LogInScreen(),
-      home: ReferenceScreen(),
+      home: const UserDashboardScreen(),
     );
   }
 }

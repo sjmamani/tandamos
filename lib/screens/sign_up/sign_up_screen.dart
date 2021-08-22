@@ -65,6 +65,7 @@ class SignUpScreen extends StatelessWidget {
               ),
               PrimaryCustomButton(
                 text: 'Crear cuenta',
+                onPressed: () {},
               ),
               CustomDivider(),
               SecondaryCustomButton(

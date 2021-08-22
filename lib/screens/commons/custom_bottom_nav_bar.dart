@@ -1,32 +1,87 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/util/colors.dart';
 
-class CustomBottomNavBar extends StatelessWidget {
-  const CustomBottomNavBar({
-    Key? key,
-  }) : super(key: key);
+class CustomBottomNavbar extends StatelessWidget {
+  const CustomBottomNavbar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      currentIndex: 1,
-      backgroundColor: primaryColor,
-      selectedItemColor: Colors.white,
-      unselectedItemColor: Colors.white.withOpacity(0.45),
-      items: [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.notifications),
-          label: 'TANDA',
+    return Material(
+      color: Colors.deepPurple[900],
+      child: SizedBox(
+        height: 85,
+        child: Row(
+          children: const [
+            CustomItemNavbar(
+              icon: Icons.notifications,
+              label: 'TANDA',
+              isSelected: true,
+            ),
+            CustomItemNavbar(
+              icon: Icons.favorite,
+              label: 'AMIGOS',
+            ),
+            CustomItemNavbar(
+              icon: Icons.settings,
+              label: 'CUENTA',
+            ),
+            CustomItemNavbar(
+              icon: Icons.chat_bubble,
+              label: 'AYUDA',
+            ),
+          ],
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.favorite),
-          label: 'AMIGOS',
+      ),
+    );
+  }
+}
+
+class CustomItemNavbar extends StatelessWidget {
+  const CustomItemNavbar({
+    Key? key,
+    required this.icon,
+    this.label = '',
+    this.isSelected = false,
+  }) : super(key: key);
+
+  final IconData icon;
+  final String label;
+  final bool isSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        decoration: BoxDecoration(
+          color: isSelected ? Colors.deepPurpleAccent[400] : Colors.transparent,
+          border: isSelected
+              ? const Border(
+                  bottom: BorderSide(
+                    color: Colors.white,
+                    width: 4.0,
+                  ),
+                )
+              : null,
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.settings),
-          label: 'CUENTA',
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              icon,
+              color: isSelected ? Colors.white : Colors.white24,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              label,
+              style: TextStyle(
+                color: isSelected ? Colors.white : Colors.white24,
+                letterSpacing: 1,
+              ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

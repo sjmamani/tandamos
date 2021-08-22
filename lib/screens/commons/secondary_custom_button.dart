@@ -20,20 +20,20 @@ class SecondaryCustomButton extends StatelessWidget {
       ),
       child: OutlinedButton(
         onPressed: onPressed,
-        child: Text(
-          text,
-          style: TextStyle(
-            color: primaryColor,
-          ),
-        ),
         style: ElevatedButton.styleFrom(
-          fixedSize: Size(250, 60),
+          fixedSize: const Size(250, 60),
           textStyle: const TextStyle(fontSize: 20),
           elevation: 0.0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),
-          side: BorderSide(color: primaryColor),
+          side: const BorderSide(color: primaryColor),
+        ),
+        child: Text(
+          text,
+          style: const TextStyle(
+            color: primaryColor,
+          ),
         ),
       ),
     );
