@@ -2,8 +2,19 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:tandamos/screens/commons/custom_floating_action_button.dart';
 
-class CuentaAgregadaScreen extends StatelessWidget {
-  const CuentaAgregadaScreen({Key? key}) : super(key: key);
+class ConfirmacionScreen extends StatelessWidget {
+  const ConfirmacionScreen({
+    Key? key,
+    required this.title,
+    required this.message,
+    this.greeting = '',
+    this.showFAB = false,
+  }) : super(key: key);
+
+  final String title;
+  final String message;
+  final String greeting;
+  final bool showFAB;
 
   @override
   Widget build(BuildContext context) {
@@ -13,22 +24,31 @@ class CuentaAgregadaScreen extends StatelessWidget {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Padding(
                 padding: EdgeInsets.only(bottom: 50),
                 child: Text(
-                  '¡Listo!',
+                  title,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                 ),
               ),
-              Icon(
+              const Icon(
                 Icons.sentiment_very_satisfied_outlined,
                 size: 64,
               ),
               Padding(
                 padding: EdgeInsets.only(top: 50),
                 child: Text(
-                  'Cuenta añadida',
+                  message,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: Text(
+                  greeting,
+                  textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20),
                 ),
               ),
@@ -36,7 +56,8 @@ class CuentaAgregadaScreen extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: CustomFloatingActionButton(onPressed: () {}),
+      floatingActionButton:
+          showFAB ? CustomFloatingActionButton(onPressed: () {}) : null,
     );
   }
 }

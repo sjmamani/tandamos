@@ -16,6 +16,7 @@ class NuevaCuentaScreen extends StatelessWidget {
           children: const [
             CustomTitle(
               title: 'Añadir cuenta',
+              icon: Icons.send_outlined,
             ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 15),

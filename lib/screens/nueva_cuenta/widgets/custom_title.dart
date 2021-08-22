@@ -4,21 +4,25 @@ class CustomTitle extends StatelessWidget {
   const CustomTitle({
     Key? key,
     required this.title,
+    required this.icon,
   }) : super(key: key);
 
   final String title;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Padding(
-          padding: EdgeInsets.only(right: 10),
-          child: Icon(Icons.send_outlined),
+        Padding(
+          padding: const EdgeInsets.only(right: 10),
+          child: Icon(icon),
         ),
-        Text(
-          title,
-          style: Theme.of(context).textTheme.headline6,
+        Flexible(
+          child: Text(
+            title,
+            style: Theme.of(context).textTheme.headline6,
+          ),
         ),
       ],
     );

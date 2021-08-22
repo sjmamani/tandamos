@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tandamos/screens/commons/custom_floating_action_button.dart';
-import 'package:tandamos/screens/nueva_cuenta/cuenta_agregada_screen.dart';
+import 'package:tandamos/screens/nueva_cuenta/confirmacion_screen.dart';
 import 'package:tandamos/screens/nueva_cuenta/widgets/custom_title.dart';
 
 class ValidacionCuentaScreen extends StatelessWidget {
@@ -13,7 +13,10 @@ class ValidacionCuentaScreen extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(30, 120, 30, 0),
         child: Column(
           children: const [
-            CustomTitle(title: 'Estamos validando tu cuenta'),
+            CustomTitle(
+              title: 'Estamos validando tu cuenta',
+              icon: Icons.send_outlined,
+            ),
             MensajeActivacion(),
           ],
         ),
@@ -22,7 +25,11 @@ class ValidacionCuentaScreen extends StatelessWidget {
         onPressed: () => Navigator.push(
             context,
             MaterialPageRoute<void>(
-              builder: (BuildContext context) => const CuentaAgregadaScreen(),
+              builder: (BuildContext context) => const ConfirmacionScreen(
+                title: '¡Listo!',
+                message: 'Cuenta añadida',
+                showFAB: true,
+              ),
             )),
       ),
     );
