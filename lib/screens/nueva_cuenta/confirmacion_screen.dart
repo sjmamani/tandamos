@@ -26,10 +26,11 @@ class ConfirmacionScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsets.only(bottom: 50),
+                padding: const EdgeInsets.only(bottom: 50),
                 child: Text(
                   title,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 24),
                 ),
               ),
               const Icon(
@@ -37,19 +38,19 @@ class ConfirmacionScreen extends StatelessWidget {
                 size: 64,
               ),
               Padding(
-                padding: EdgeInsets.only(top: 50),
+                padding: const EdgeInsets.only(top: 50),
                 child: Text(
                   message,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 20),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 20),
                 child: Text(
                   greeting,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 20),
                 ),
               ),
             ],
@@ -66,7 +67,7 @@ class YellowCirclePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()..color = Colors.yellow[200]!;
-    final path = Path();
+    // final path = Path();
 
     canvas.drawArc(
       Rect.fromCenter(

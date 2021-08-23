@@ -7,7 +7,7 @@ class TandamosLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
+    return const Align(
       alignment: Alignment.centerLeft,
       child: SizedBox(
         height: 30,

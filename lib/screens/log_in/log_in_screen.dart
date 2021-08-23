@@ -18,7 +18,7 @@ class LogInScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            TandamosLogo(),
+            const TandamosLogo(),
             SwitchText(
               text: '¿No tienes una cuenta?',
               linkedText: 'Regístrate',
@@ -29,20 +29,20 @@ class LogInScreen extends StatelessWidget {
                 ),
               ),
             ),
-            MainTitle(title: 'Inicia Sesión'),
-            CustomTextField(
+            const MainTitle(title: 'Inicia Sesión'),
+            const CustomTextField(
               hintText: 'Correo electrónico',
             ),
-            CustomTextField(
+            const CustomTextField(
               hintText: 'Contraseña',
               obscureText: true,
             ),
-            ForgotPasswordText(),
+            const ForgotPasswordText(),
             PrimaryCustomButton(
               text: 'Ingresar',
               onPressed: () {},
             ),
-            CustomDivider(),
+            const CustomDivider(),
             SecondaryCustomButton(
               text: 'Google',
               onPressed: () {},

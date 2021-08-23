@@ -18,11 +18,11 @@ class FriendItem extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Spacer(),
-          CircleAvatar(
+          const Spacer(),
+          const CircleAvatar(
             backgroundColor: Colors.grey,
           ),
-          SizedBox(
+          const SizedBox(
             width: 15,
           ),
           Expanded(child: Text(name)),
@@ -34,12 +34,12 @@ class FriendItem extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
-            child: Icon(
+            child: const Icon(
               Icons.done,
               color: Colors.grey,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 15,
           ),
           Container(
@@ -50,12 +50,12 @@ class FriendItem extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
-            child: Icon(
+            child: const Icon(
               Icons.close,
               color: Colors.grey,
             ),
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );

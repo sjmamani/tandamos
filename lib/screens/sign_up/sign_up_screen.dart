@@ -18,7 +18,7 @@ class SignUpScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              TandamosLogo(),
+              const TandamosLogo(),
               SwitchText(
                 text: '¿Ya tienes una cuenta?',
                 linkedText: 'Inicia sesión',
@@ -29,25 +29,25 @@ class SignUpScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              MainTitle(
+              const MainTitle(
                 title: 'Crea una cuenta',
               ),
-              CustomTextField(
+              const CustomTextField(
                 hintText: 'Nombre',
               ),
-              CustomTextField(
+              const CustomTextField(
                 hintText: 'Correo electrónico',
               ),
-              CustomTextField(
+              const CustomTextField(
                 hintText: 'Contraseña',
                 obscureText: true,
               ),
-              CustomTextField(
+              const CustomTextField(
                 hintText: 'Confirmar contraseña',
                 obscureText: true,
               ),
-              Padding(
-                padding: const EdgeInsets.only(
+              const Padding(
+                padding: EdgeInsets.only(
                   top: 40,
                   left: 30,
                   right: 20,
@@ -60,14 +60,14 @@ class SignUpScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              CustomTextField(
+              const CustomTextField(
                 hintText: 'Código de invitación',
               ),
               PrimaryCustomButton(
                 text: 'Crear cuenta',
                 onPressed: () {},
               ),
-              CustomDivider(),
+              const CustomDivider(),
               SecondaryCustomButton(
                 text: 'Google',
                 onPressed: () {},
