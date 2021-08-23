@@ -8,14 +8,19 @@ class PrimaryCustomButton extends StatelessWidget {
     required this.text,
     this.color = primaryColor,
     required this.onPressed,
+    this.icon,
+    this.fontSize = 20,
   }) : super(key: key);
 
   final String text;
+  final double fontSize;
   final Color color;
+  final Icon? icon;
   final Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
+    final iconWidget = icon ?? const SizedBox.shrink();
     return Padding(
       padding: const EdgeInsets.symmetric(
         vertical: 10,
@@ -31,7 +36,17 @@ class PrimaryCustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(50),
           ),
         ),
-        child: Text(text),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            iconWidget,
+            const SizedBox(width: 10),
+            Text(
+              text,
+              style: TextStyle(fontSize: fontSize),
+            ),
+          ],
+        ),
       ),
     );
   }
