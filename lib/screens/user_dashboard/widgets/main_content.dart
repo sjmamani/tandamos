@@ -97,8 +97,10 @@ class EstatusTanda extends StatelessWidget {
     required this.cantMaxima,
     required this.cantPagados,
     required this.posicionEstrella,
-  })  : assert(posicionEstrella < 0 || posicionEstrella >= cantMaxima,
-            'La posición de la estrella debe ser mayor a 0 y menor a la cantidad máxima'),
+  })  : assert(posicionEstrella > 0,
+            'La posición de la estrella debe ser mayor a 0'),
+        assert(posicionEstrella <= cantMaxima,
+            'La posición de la estrella debe ser menor o igual a la cantidad máxima'),
         assert(cantPagados < cantMaxima,
             'La cantidad de pagos debe ser menor o igual a la cantidad máxima'),
         assert(
@@ -117,8 +119,7 @@ class EstatusTanda extends StatelessWidget {
         (index) => Container(
           margin: const EdgeInsets.only(right: 5),
           color: index >= cantPagados ? Colors.white : Colors.blue,
-          width: 25,
-          height: 45,
+          height: 44,
           child: index == (posicionEstrella - 1)
               ? const Icon(Icons.star_border_outlined)
               : null,
