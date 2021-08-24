@@ -2,141 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tandamos/screens/commons/custom_bottom_nav_bar.dart';
 import 'package:tandamos/screens/commons/primary_custom_button.dart';
 
-class Item {
-  Item({
-    required this.header,
-    required this.body,
-    this.isExpanded = false,
-  });
-
-  Widget header;
-  Widget body;
-  bool isExpanded;
-}
-
-List<Item> generatePanels() {
-  return [
-    Item(
-      header: const CustomPanelHeader(
-        text: 'INFORMACIÓN PERSONAL',
-        isExpanded: false,
-      ),
-      body: Container(
-        padding: const EdgeInsets.symmetric(
-          vertical: 10,
-          horizontal: 25,
-        ),
-        width: double.infinity,
-        height: 200,
-        color: Colors.indigo[100],
-        child: Column(
-          children: [
-            Row(
-              children: const [
-                Icon(Icons.check_circle_outline),
-                SizedBox(width: 10),
-                Text('Jessica Ortiz'),
-              ],
-            ),
-            Row(
-              children: const [
-                Icon(Icons.check_circle_outline),
-                SizedBox(width: 10),
-                Text('13 de octubre de 1986'),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const Text('jessica@gmail.com'),
-                BotonEditar(onPressed: () {}),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const Text('+52 1234 5678 90'),
-                BotonEditar(onPressed: () {}),
-              ],
-            ),
-          ],
-        ),
-      ),
-    ),
-    Item(
-      header: const CustomPanelHeader(
-        text: 'DATOS BANCARIOS',
-        isExpanded: false,
-      ),
-      body: Container(
-        padding: const EdgeInsets.symmetric(
-          vertical: 10,
-          horizontal: 25,
-        ),
-        width: double.infinity,
-        height: 200,
-        color: Colors.indigo[100],
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('Aquí depositamos tu tanda:'),
-            Row(
-              children: [
-                const Expanded(
-                  child: Text(
-                    'Cuenta 0 89765 36452 BBVA ',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-                BotonEditar(onPressed: () {}),
-              ],
-            ),
-            const SizedBox(height: 30),
-            Align(
-              alignment: Alignment.centerRight,
-              child: GestureDetector(
-                onTap: () {},
-                child: const Text(
-                  '+ Añadir una cuenta',
-                  style: TextStyle(
-                    color: Colors.deepPurpleAccent,
-                    decoration: TextDecoration.underline,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    ),
-    Item(
-      header: const CustomPanelHeader(
-        text: 'MIS TANDAS',
-        isExpanded: false,
-      ),
-      body: Container(
-        padding: const EdgeInsets.symmetric(
-          vertical: 20,
-          horizontal: 40,
-        ),
-        color: Colors.indigo[50],
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            TandaItem(),
-            TandaItem(),
-            TandaItem(),
-          ],
-        ),
-      ),
-    ),
-  ];
-}
-
 class DatosCuentaScreen extends StatefulWidget {
   const DatosCuentaScreen({Key? key}) : super(key: key);
 
@@ -145,28 +10,161 @@ class DatosCuentaScreen extends StatefulWidget {
 }
 
 class _DatosCuentaScreenState extends State<DatosCuentaScreen> {
+  bool isInformacionPersonalExpanded = false;
+  bool isDatosBancariosExpanded = false;
+  bool isMisTandasExpanded = false;
   @override
   Widget build(BuildContext context) {
-    final List<Item> _data = generatePanels();
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
           child: Container(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(25),
             child: ExpansionPanelList(
               dividerColor: Colors.black26,
               elevation: 0,
               expansionCallback: (int index, bool isExpanded) {
                 setState(() {
-                  _data[index].isExpanded = !isExpanded;
+                  switch (index) {
+                    case 0:
+                      isInformacionPersonalExpanded = !isExpanded;
+                      break;
+                    case 1:
+                      isDatosBancariosExpanded = !isExpanded;
+                      break;
+                    case 2:
+                      isMisTandasExpanded = !isExpanded;
+                      break;
+                    default:
+                  }
                 });
               },
-              children: _data
-                  .map((Item item) => ExpansionPanel(
-                      headerBuilder: (context, isExpanded) => item.header,
-                      body: item.body,
-                      isExpanded: item.isExpanded))
-                  .toList(),
+              children: [
+                ExpansionPanel(
+                  isExpanded: isInformacionPersonalExpanded,
+                  canTapOnHeader: true,
+                  headerBuilder: (context, isExpanded) => CustomPanelHeader(
+                    text: 'INFORMACIÓN PERSONAL',
+                    isExpanded: isExpanded,
+                  ),
+                  body: Container(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 25,
+                    ),
+                    width: double.infinity,
+                    height: 200,
+                    color: Colors.indigo[100],
+                    child: Column(
+                      children: [
+                        Row(
+                          children: const [
+                            Icon(Icons.check_circle_outline),
+                            SizedBox(width: 10),
+                            Text('Jessica Ortiz'),
+                          ],
+                        ),
+                        Row(
+                          children: const [
+                            Icon(Icons.check_circle_outline),
+                            SizedBox(width: 10),
+                            Text('13 de octubre de 1986'),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            const Text('jessica@gmail.com'),
+                            BotonEditar(onPressed: () {}),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            const Text('+52 1234 5678 90'),
+                            BotonEditar(onPressed: () {}),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                ExpansionPanel(
+                  isExpanded: isDatosBancariosExpanded,
+                  canTapOnHeader: true,
+                  headerBuilder: (context, isExpanded) => CustomPanelHeader(
+                    text: 'DATOS BANCARIOS',
+                    isExpanded: isExpanded,
+                  ),
+                  body: Container(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 25,
+                    ),
+                    width: double.infinity,
+                    height: 200,
+                    color: Colors.indigo[100],
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text('Aquí depositamos tu tanda:'),
+                        Row(
+                          children: [
+                            const Expanded(
+                              child: Text(
+                                'Cuenta 0 89765 36452 BBVA ',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                            BotonEditar(onPressed: () {}),
+                          ],
+                        ),
+                        const SizedBox(height: 30),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: GestureDetector(
+                            onTap: () {},
+                            child: const Text(
+                              '+ Añadir una cuenta',
+                              style: TextStyle(
+                                color: Colors.deepPurpleAccent,
+                                decoration: TextDecoration.underline,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                ExpansionPanel(
+                  isExpanded: isMisTandasExpanded,
+                  canTapOnHeader: true,
+                  headerBuilder: (context, isExpanded) => CustomPanelHeader(
+                    text: 'MIS TANDAS',
+                    isExpanded: isExpanded,
+                  ),
+                  body: Container(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 20,
+                      horizontal: 40,
+                    ),
+                    color: Colors.indigo[50],
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: const [
+                        TandaItem(),
+                        TandaItem(),
+                        TandaItem(),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
@@ -259,12 +257,15 @@ class CustomPanelHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: TextStyle(
-        fontSize: 16,
-        letterSpacing: 1,
-        fontWeight: isExpanded ? FontWeight.bold : FontWeight.normal,
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 16,
+          letterSpacing: 1,
+          fontWeight: isExpanded ? FontWeight.bold : FontWeight.normal,
+        ),
       ),
     );
   }
