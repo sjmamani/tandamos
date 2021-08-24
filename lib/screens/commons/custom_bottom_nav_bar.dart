@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomBottomNavbar extends StatelessWidget {
-  const CustomBottomNavbar({Key? key}) : super(key: key);
+  const CustomBottomNavbar({Key? key, this.selectedIndex = 0})
+      : super(key: key);
+
+  final int selectedIndex;
 
   @override
   Widget build(BuildContext context) {
@@ -10,23 +13,26 @@ class CustomBottomNavbar extends StatelessWidget {
       child: SizedBox(
         height: 85,
         child: Row(
-          children: const [
+          children: [
             CustomItemNavbar(
               icon: Icons.notifications,
               label: 'TANDA',
-              isSelected: true,
+              isSelected: selectedIndex == 0,
             ),
             CustomItemNavbar(
               icon: Icons.favorite,
               label: 'AMIGOS',
+              isSelected: selectedIndex == 1,
             ),
             CustomItemNavbar(
               icon: Icons.settings,
               label: 'CUENTA',
+              isSelected: selectedIndex == 2,
             ),
             CustomItemNavbar(
               icon: Icons.chat_bubble,
               label: 'AYUDA',
+              isSelected: selectedIndex == 3,
             ),
           ],
         ),

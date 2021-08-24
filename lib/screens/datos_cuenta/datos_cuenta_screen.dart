@@ -170,7 +170,7 @@ class _DatosCuentaScreenState extends State<DatosCuentaScreen> {
             ),
           ),
         ),
-        bottomNavigationBar: const CustomBottomNavbar(),
+        bottomNavigationBar: const CustomBottomNavbar(selectedIndex: 2),
       ),
     );
   }
