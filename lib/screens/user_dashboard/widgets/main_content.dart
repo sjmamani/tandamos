@@ -119,6 +119,7 @@ class EstatusTanda extends StatelessWidget {
         (index) => Container(
           margin: const EdgeInsets.only(right: 5),
           color: index >= cantPagados ? Colors.white : Colors.blue,
+          width: 22,
           height: 44,
           child: index == (posicionEstrella - 1)
               ? const Icon(Icons.star_border_outlined)
