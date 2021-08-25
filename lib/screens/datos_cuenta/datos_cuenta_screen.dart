@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tandamos/screens/commons/custom_bottom_nav_bar.dart';
 import 'package:tandamos/screens/commons/primary_custom_button.dart';
 
+final Color bodyExpansionColor = Colors.indigo[100]!.withOpacity(0.3);
+
 class DatosCuentaScreen extends StatefulWidget {
   const DatosCuentaScreen({Key? key}) : super(key: key);
 
@@ -54,7 +56,7 @@ class _DatosCuentaScreenState extends State<DatosCuentaScreen> {
                     ),
                     width: double.infinity,
                     height: 200,
-                    color: Colors.indigo[100],
+                    color: bodyExpansionColor,
                     child: Column(
                       children: [
                         Row(
@@ -103,7 +105,7 @@ class _DatosCuentaScreenState extends State<DatosCuentaScreen> {
                     ),
                     width: double.infinity,
                     height: 200,
-                    color: Colors.indigo[100],
+                    color: bodyExpansionColor,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -148,19 +150,33 @@ class _DatosCuentaScreenState extends State<DatosCuentaScreen> {
                     text: 'MIS TANDAS',
                     isExpanded: isExpanded,
                   ),
-                  body: Container(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 20,
-                      horizontal: 40,
-                    ),
-                    color: Colors.indigo[50],
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: const [
-                        TandaItem(),
-                        TandaItem(),
-                        TandaItem(),
-                      ],
+                  body: SingleChildScrollView(
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 20,
+                        horizontal: 40,
+                      ),
+                      color: Colors.indigo[50],
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: const [
+                          TandaItem(
+                            periodo: '9 semanas. 1 may - 30 jul 2021',
+                            concepto: 'Mercancía',
+                            monto: 500,
+                          ),
+                          TandaItem(
+                            periodo: '12 semanas. 1 may - 30 jul 2021',
+                            concepto: 'Cumple Carlitos',
+                            monto: 11000,
+                          ),
+                          TandaItem(
+                            periodo: '8 semanas. 1 may - 30 jul 2021',
+                            concepto: 'Zapatos',
+                            monto: 2500,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -177,42 +193,53 @@ class _DatosCuentaScreenState extends State<DatosCuentaScreen> {
 class TandaItem extends StatelessWidget {
   const TandaItem({
     Key? key,
+    required this.monto,
+    required this.concepto,
+    required this.periodo,
   }) : super(key: key);
+
+  final double monto;
+  final String concepto;
+  final String periodo;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            CircleAvatar(
-              backgroundColor: Colors.indigoAccent[100]!,
-              radius: 26,
-              child: const Icon(
-                Icons.trending_up,
-                color: Colors.black,
-                size: 32,
-              ),
-            ),
-            const SizedBox(width: 10),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  '\$500.00 mxn',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              CircleAvatar(
+                backgroundColor: Colors.indigoAccent[100],
+                radius: 26,
+                child: const Icon(
+                  Icons.trending_up,
+                  color: Colors.black,
+                  size: 32,
                 ),
-                Text('Mercancia', style: TextStyle(color: Colors.grey)),
-              ],
-            ),
-          ],
-        ),
-        const Text('9 semanas. 1 may - 30 jul 2021'),
-      ],
+              ),
+              const SizedBox(width: 10),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '\$${monto.toStringAsFixed(2)} mxn',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                  Text(concepto, style: const TextStyle(color: Colors.grey)),
+                ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Text(periodo),
+        ],
+      ),
     );
   }
 }

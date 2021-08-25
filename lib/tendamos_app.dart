@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tandamos/screens/datos_cuenta/datos_cuenta_screen.dart';
-import 'package:tandamos/screens/user_dashboard/user_dashboard_screen.dart';
+import 'package:tandamos/screens/pago/pago_screen.dart';
 import 'package:tandamos/util/colors.dart';
 
 class TendamosApp extends StatelessWidget {
@@ -11,7 +11,8 @@ class TendamosApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: primaryColor,
       ),
-      home: const DatosCuentaScreen(),
+      // home: const DatosCuentaScreen(),
+      home: const PagoScreen(),
     );
   }
 }
