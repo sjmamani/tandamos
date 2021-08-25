@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tandamos/screens/datos_cuenta/datos_cuenta_screen.dart';
 import 'package:tandamos/screens/pago/pago_screen.dart';
+import 'package:tandamos/screens/terminos_condiciones/terminos_condiciones_screen.dart';
 import 'package:tandamos/util/colors.dart';
 
 class TendamosApp extends StatelessWidget {
@@ -12,7 +13,7 @@ class TendamosApp extends StatelessWidget {
         primaryColor: primaryColor,
       ),
       // home: const DatosCuentaScreen(),
-      home: const PagoScreen(),
+      home: const TerminosCondicionesScreen(),
     );
   }
 }

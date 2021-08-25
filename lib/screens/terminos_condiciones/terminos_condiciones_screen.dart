@@ -22,14 +22,12 @@ class TerminosCondicionesScreen extends StatelessWidget {
             const CustomCheckboxItem(
               text: 'He leído y acepto los ',
               linkeableText: 'Términos y condiciones',
-              url:
-                  'https://drive.google.com/file/d/1iXPeXuDgheQyabVKNpdNzDluGqRtnxol/view',
+              url: 'http://sftp.fibertel.com.ar/services/file-50MB.img',
             ),
             const CustomCheckboxItem(
               text: 'He leído y acepto el ',
               linkeableText: 'Aviso de privacidad',
-              url:
-                  'https://drive.google.com/file/d/1iXPeXuDgheQyabVKNpdNzDluGqRtnxol/view',
+              url: 'http://sftp.fibertel.com.ar/services/file-50MB.img',
             ),
             const SizedBox(height: 100),
             PrimaryCustomButton(
