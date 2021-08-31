@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import 'package:tandamos/screens/commons/custom_floating_action_button.dart';
+import 'package:tandamos/app/screens/commons/custom_floating_action_button.dart';
 
 class ConfirmacionScreen extends StatelessWidget {
   const ConfirmacionScreen({

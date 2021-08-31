@@ -12,7 +12,7 @@ class TandamosLogo extends StatelessWidget {
       child: SizedBox(
         height: 30,
         width: 120,
-        child: Placeholder(),
+        child: Image(image: AssetImage("assets/tandamos.png")),
       ),
     );
   }

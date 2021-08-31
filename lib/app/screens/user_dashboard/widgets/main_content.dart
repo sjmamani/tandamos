@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/screens/commons/custom_divider.dart';
-import 'package:tandamos/screens/commons/primary_custom_button.dart';
+import 'package:tandamos/app/screens/commons/custom_divider.dart';
+import 'package:tandamos/app/screens/commons/primary_custom_button.dart';
 
 class MainContent extends StatelessWidget {
   const MainContent({

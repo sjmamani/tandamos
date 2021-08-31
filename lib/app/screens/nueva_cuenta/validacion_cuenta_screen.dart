@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/screens/commons/custom_floating_action_button.dart';
-import 'package:tandamos/screens/nueva_cuenta/confirmacion_screen.dart';
-import 'package:tandamos/screens/nueva_cuenta/widgets/custom_title.dart';
+import 'package:tandamos/app/screens/commons/custom_floating_action_button.dart';
+import 'package:tandamos/app/screens/nueva_cuenta/confirmacion_screen.dart';
+import 'package:tandamos/app/screens/nueva_cuenta/widgets/custom_title.dart';
 
 class ValidacionCuentaScreen extends StatelessWidget {
   const ValidacionCuentaScreen({Key? key}) : super(key: key);

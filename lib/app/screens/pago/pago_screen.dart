@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/screens/commons/custom_floating_action_button.dart';
-import 'package:tandamos/screens/pago/widgets/adelanto_pago.dart';
-import 'package:tandamos/screens/pago/widgets/pago_semanal.dart';
-import 'package:tandamos/screens/pago/widgets/resumen_pago.dart';
-import 'package:tandamos/screens/user_dashboard/widgets/main_content.dart';
+import 'package:tandamos/app/screens/commons/custom_floating_action_button.dart';
+import 'package:tandamos/app/screens/pago/widgets/adelanto_pago.dart';
+import 'package:tandamos/app/screens/pago/widgets/pago_semanal.dart';
+import 'package:tandamos/app/screens/pago/widgets/resumen_pago.dart';
+import 'package:tandamos/app/screens/user_dashboard/widgets/main_content.dart';
 
 class PagoScreen extends StatelessWidget {
   const PagoScreen({Key? key}) : super(key: key);

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/screens/datos_cuenta/datos_cuenta_screen.dart';
-import 'package:tandamos/screens/pago/pago_screen.dart';
-import 'package:tandamos/screens/terminos_condiciones/terminos_condiciones_screen.dart';
-import 'package:tandamos/util/colors.dart';
+import 'package:tandamos/app/modules/new_tanda/new_tanda_page.dart';
+import 'package:tandamos/app/theme/app_theme.dart';
 
 class TendamosApp extends StatelessWidget {
   @override
@@ -10,10 +8,9 @@ class TendamosApp extends StatelessWidget {
     return MaterialApp(
       title: 'Tandamos',
       theme: ThemeData(
-        primaryColor: primaryColor,
+        primaryColor: kPrimary,
       ),
-      // home: const DatosCuentaScreen(),
-      home: const TerminosCondicionesScreen(),
+      home: const NewTandaPage(),
     );
   }
 }

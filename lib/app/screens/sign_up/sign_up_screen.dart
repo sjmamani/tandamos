@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/screens/commons/main_title.dart';
-import 'package:tandamos/screens/commons/primary_custom_button.dart';
-import 'package:tandamos/screens/commons/secondary_custom_button.dart';
-import 'package:tandamos/screens/commons/switch_text.dart';
-import 'package:tandamos/screens/commons/tandamos_logo.dart';
-import 'package:tandamos/screens/log_in/log_in_screen.dart';
-import 'package:tandamos/screens/commons/custom_divider.dart';
-import 'package:tandamos/screens/commons/custom_text_field.dart';
+import 'package:tandamos/app/screens/commons/main_title.dart';
+import 'package:tandamos/app/screens/commons/primary_custom_button.dart';
+import 'package:tandamos/app/screens/commons/secondary_custom_button.dart';
+import 'package:tandamos/app/screens/commons/switch_text.dart';
+import 'package:tandamos/app/screens/commons/tandamos_logo.dart';
+import 'package:tandamos/app/screens/log_in/log_in_screen.dart';
+import 'package:tandamos/app/screens/commons/custom_divider.dart';
+import 'package:tandamos/app/screens/commons/custom_text_field.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -33,18 +33,16 @@ class SignUpScreen extends StatelessWidget {
                 title: 'Crea una cuenta',
               ),
               const CustomTextField(
-                hintText: 'Nombre',
+                labelText: 'Nombre',
               ),
               const CustomTextField(
-                hintText: 'Correo electrónico',
+                labelText: 'Correo electrónico',
               ),
               const CustomTextField(
-                hintText: 'Contraseña',
-                obscureText: true,
+                labelText: 'Contraseña',
               ),
               const CustomTextField(
-                hintText: 'Confirmar contraseña',
-                obscureText: true,
+                labelText: 'Confirmar contraseña',
               ),
               const Padding(
                 padding: EdgeInsets.only(
@@ -61,7 +59,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ),
               const CustomTextField(
-                hintText: 'Código de invitación',
+                labelText: 'Código de invitación',
               ),
               PrimaryCustomButton(
                 text: 'Crear cuenta',

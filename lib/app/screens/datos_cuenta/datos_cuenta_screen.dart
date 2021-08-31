@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/screens/commons/custom_bottom_nav_bar.dart';
-import 'package:tandamos/screens/commons/primary_custom_button.dart';
+import 'package:tandamos/app/screens/commons/custom_bottom_nav_bar.dart';
+import 'package:tandamos/app/screens/commons/primary_custom_button.dart';
 
 final Color bodyExpansionColor = Colors.indigo[100]!.withOpacity(0.3);
 

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/screens/commons/main_title.dart';
-import 'package:tandamos/screens/commons/primary_custom_button.dart';
-import 'package:tandamos/screens/commons/secondary_custom_button.dart';
-import 'package:tandamos/screens/commons/tandamos_logo.dart';
-import 'package:tandamos/screens/commons/custom_divider.dart';
-import 'package:tandamos/screens/commons/custom_text_field.dart';
-import 'package:tandamos/screens/log_in/widgets/forgot_password_text.dart';
-import 'package:tandamos/screens/commons/switch_text.dart';
-import 'package:tandamos/screens/sign_up/sign_up_screen.dart';
+import 'package:tandamos/app/screens/commons/main_title.dart';
+import 'package:tandamos/app/screens/commons/primary_custom_button.dart';
+import 'package:tandamos/app/screens/commons/secondary_custom_button.dart';
+import 'package:tandamos/app/screens/commons/tandamos_logo.dart';
+import 'package:tandamos/app/screens/commons/custom_divider.dart';
+import 'package:tandamos/app/screens/commons/custom_text_field.dart';
+import 'package:tandamos/app/screens/log_in/widgets/forgot_password_text.dart';
+import 'package:tandamos/app/screens/commons/switch_text.dart';
+import 'package:tandamos/app/screens/sign_up/sign_up_screen.dart';
 
 class LogInScreen extends StatelessWidget {
   const LogInScreen({Key? key}) : super(key: key);
@@ -31,11 +31,10 @@ class LogInScreen extends StatelessWidget {
             ),
             const MainTitle(title: 'Inicia Sesión'),
             const CustomTextField(
-              hintText: 'Correo electrónico',
+              labelText: 'Correo electrónico',
             ),
             const CustomTextField(
-              hintText: 'Contraseña',
-              obscureText: true,
+              labelText: 'Contraseña',
             ),
             const ForgotPasswordText(),
             PrimaryCustomButton(

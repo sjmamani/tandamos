@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:tandamos/screens/commons/primary_custom_button.dart';
-import 'package:tandamos/screens/nueva_cuenta/widgets/custom_title.dart';
+import 'package:tandamos/app/screens/commons/primary_custom_button.dart';
+import 'package:tandamos/app/screens/nueva_cuenta/widgets/custom_title.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class TerminosCondicionesScreen extends StatelessWidget {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/screens/commons/custom_bottom_nav_bar.dart';
-import 'package:tandamos/screens/commons/custom_text_field.dart';
-import 'package:tandamos/screens/commons/tandamos_logo.dart';
-import 'package:tandamos/screens/reference/widgets/banner_recommend_us.dart';
-import 'package:tandamos/screens/reference/widgets/friend_item.dart';
+import 'package:tandamos/app/screens/commons/custom_bottom_nav_bar.dart';
+import 'package:tandamos/app/screens/commons/custom_text_field.dart';
+import 'package:tandamos/app/screens/commons/tandamos_logo.dart';
+import 'package:tandamos/app/screens/reference/widgets/banner_recommend_us.dart';
+import 'package:tandamos/app/screens/reference/widgets/friend_item.dart';
 
 class ReferenceScreen extends StatelessWidget {
   const ReferenceScreen({Key? key}) : super(key: key);
@@ -97,9 +97,9 @@ class ReferenceScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              CustomTextField(hintText: 'Celular amigo 1'),
-              CustomTextField(hintText: 'Celular amigo 2'),
-              CustomTextField(hintText: 'Celular amigo 3'),
+              CustomTextField(labelText: 'Celular amigo 1'),
+              CustomTextField(labelText: 'Celular amigo 2'),
+              CustomTextField(labelText: 'Celular amigo 3'),
             ],
           ),
         ),
