@@ -12,7 +12,7 @@ class TendamosApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimary,
       ),
-      home: const VerificacionIdentidadPage(),
+      home: const NewTandaPage(),
     );
   }
 }

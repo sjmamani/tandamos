@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tandamos/app/screens/commons/custom_floating_action_button.dart';
 import 'package:tandamos/app/screens/commons/custom_text_field.dart';
 import 'package:tandamos/app/screens/commons/tandamos_logo.dart';
@@ -31,7 +32,15 @@ class NewTandaPage extends StatelessWidget {
                 labelText: 'Nombre de tanda',
                 hintText: 'Ej. Refrigerador',
               ),
-              const Placeholder(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: SvgPicture.asset(
+                  'assets/imgs/manos-chocando.svg',
+                  // color: Colors.amber,
+                  placeholderBuilder: (BuildContext context) =>
+                      const Center(child: CircularProgressIndicator()),
+                ),
+              ),
             ],
           ),
         ),
