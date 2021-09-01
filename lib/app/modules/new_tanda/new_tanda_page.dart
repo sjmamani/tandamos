@@ -36,7 +36,7 @@ class NewTandaPage extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: SvgPicture.asset(
-                    'assets/imgs/manos-chocando2.svg',
+                    'assets/imgs/manos.svg',
                     // color: Colors.amber,
                     placeholderBuilder: (BuildContext context) =>
                         const Center(child: CircularProgressIndicator()),
