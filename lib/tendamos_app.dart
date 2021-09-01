@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/app/modules/new_tanda/new_tanda_page.dart';
-import 'package:tandamos/app/modules/onboarding/verificacion_identidad_page.dart';
-import 'package:tandamos/app/modules/waiting_list/waiting_list_page.dart';
-import 'package:tandamos/app/screens/nueva_cuenta/nueva_cuenta_screen.dart';
-import 'package:tandamos/app/screens/user_dashboard/user_dashboard_screen.dart';
+import 'package:tandamos/app/modules/onboarding/verificacion_celular_page.dart';
 import 'package:tandamos/app/theme/app_theme.dart';
-
-import 'app/screens/terminos_condiciones/terminos_condiciones_screen.dart';
 
 class TendamosApp extends StatelessWidget {
   @override
@@ -16,7 +10,7 @@ class TendamosApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimary,
       ),
-      home: const NewTandaPage(),
+      home: const VerificacionCelularPage(),
     );
   }
 }
