@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tandamos/app/modules/new_tanda/new_tanda_page.dart';
+import 'package:tandamos/app/modules/waiting_list/waiting_list_page.dart';
 import 'package:tandamos/app/theme/app_theme.dart';
 
 class TendamosApp extends StatelessWidget {
@@ -10,7 +11,7 @@ class TendamosApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimary,
       ),
-      home: const NewTandaPage(),
+      home: const WaitingListPage(),
     );
   }
 }
