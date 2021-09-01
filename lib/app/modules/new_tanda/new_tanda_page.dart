@@ -32,13 +32,15 @@ class NewTandaPage extends StatelessWidget {
                 labelText: 'Nombre de tanda',
                 hintText: 'Ej. Refrigerador',
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: SvgPicture.asset(
-                  'assets/imgs/manos-chocando.svg',
-                  // color: Colors.amber,
-                  placeholderBuilder: (BuildContext context) =>
-                      const Center(child: CircularProgressIndicator()),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: SvgPicture.asset(
+                    'assets/imgs/manos-chocando2.svg',
+                    // color: Colors.amber,
+                    placeholderBuilder: (BuildContext context) =>
+                        const Center(child: CircularProgressIndicator()),
+                  ),
                 ),
               ),
             ],
