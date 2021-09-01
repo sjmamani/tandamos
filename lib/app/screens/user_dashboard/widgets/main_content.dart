@@ -16,74 +16,72 @@ class MainContent extends StatelessWidget {
             horizontal: 30,
             vertical: 15,
           ),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(bottom: 25, top: 20),
-                    child: Text(
-                      'ESTATUS DE TANDA',
-                      style: TextStyle(
-                          fontSize: 22,
-                          letterSpacing: 1,
-                          fontWeight: FontWeight.w300),
-                    ),
-                  ),
-                ),
-                const EstatusTanda(
-                  cantMaxima: 11,
-                  cantPagados: 3,
-                  posicionEstrella: 11,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 25, bottom: 40),
+          child: Column(
+            children: [
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.only(bottom: 25, top: 20),
                   child: Text(
-                    'Quedan 11 pagos para recibir tu tanda',
+                    'ESTATUS DE TANDA',
                     style: TextStyle(
-                      fontSize: 16,
-                    ),
+                        fontSize: 22,
+                        letterSpacing: 1,
+                        fontWeight: FontWeight.w300),
                   ),
                 ),
-                PrimaryCustomButton(
-                  text: 'Pagar',
-                  color: Colors.blueGrey[900]!,
-                  onPressed: () {},
+              ),
+              const EstatusTanda(
+                cantMaxima: 11,
+                cantPagados: 3,
+                posicionEstrella: 11,
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 25, bottom: 40),
+                child: Text(
+                  'Quedan 11 pagos para recibir tu tanda',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
                 ),
-                PrimaryCustomButton(
-                  text: 'Pagar',
-                  color: Colors.blueGrey[900]!,
-                  onPressed: () {},
-                ),
-                PrimaryCustomButton(
-                  text: 'Pagar',
-                  color: Colors.blueGrey[900]!,
-                  onPressed: () {},
-                ),
-                PrimaryCustomButton(
-                  text: 'Pagar',
-                  color: Colors.blueGrey[900]!,
-                  onPressed: () {},
-                ),
-                PrimaryCustomButton(
-                  text: 'Pagar',
-                  color: Colors.blueGrey[900]!,
-                  onPressed: () {},
-                ),
-                PrimaryCustomButton(
-                  text: 'Pagar',
-                  color: Colors.blueGrey[900]!,
-                  onPressed: () {},
-                ),
-                const CustomDivider(),
-                PrimaryCustomButton(
-                  text: 'Otras opciones',
-                  color: Colors.blueGrey[900]!,
-                  onPressed: () {},
-                ),
-              ],
-            ),
+              ),
+              PrimaryCustomButton(
+                text: 'Pagar',
+                color: Colors.blueGrey[900]!,
+                onPressed: () {},
+              ),
+              PrimaryCustomButton(
+                text: 'Pagar',
+                color: Colors.blueGrey[900]!,
+                onPressed: () {},
+              ),
+              PrimaryCustomButton(
+                text: 'Pagar',
+                color: Colors.blueGrey[900]!,
+                onPressed: () {},
+              ),
+              PrimaryCustomButton(
+                text: 'Pagar',
+                color: Colors.blueGrey[900]!,
+                onPressed: () {},
+              ),
+              PrimaryCustomButton(
+                text: 'Pagar',
+                color: Colors.blueGrey[900]!,
+                onPressed: () {},
+              ),
+              PrimaryCustomButton(
+                text: 'Pagar',
+                color: Colors.blueGrey[900]!,
+                onPressed: () {},
+              ),
+              const CustomDivider(),
+              PrimaryCustomButton(
+                text: 'Otras opciones',
+                color: Colors.blueGrey[900]!,
+                onPressed: () {},
+              ),
+            ],
           ),
         ),
       ),
