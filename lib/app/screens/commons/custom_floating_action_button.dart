@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tandamos/app/theme/app_theme.dart';
 
 class CustomFloatingActionButton extends StatelessWidget {
   const CustomFloatingActionButton({
@@ -14,25 +15,28 @@ class CustomFloatingActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        FloatingActionButton(
-          onPressed: onPressed,
-          backgroundColor: Colors.blueGrey[900],
-          elevation: 0,
-          child: Icon(
-            icon,
-            color: Colors.white,
-            size: 48,
+    return Padding(
+      padding: const EdgeInsets.only(left: 40),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: onPressed,
+            backgroundColor: kC,
+            elevation: 0,
+            child: Icon(
+              icon,
+              color: Colors.white,
+              size: 48,
+            ),
           ),
-        ),
-        const SizedBox(height: 10),
-        Text(
-          text,
-          style: const TextStyle(letterSpacing: 1),
-        ),
-      ],
+          const SizedBox(height: 10),
+          Text(
+            text,
+            style: const TextStyle(letterSpacing: 1),
+          ),
+        ],
+      ),
     );
   }
 }

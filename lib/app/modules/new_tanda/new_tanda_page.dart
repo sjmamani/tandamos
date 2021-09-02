@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tandamos/app/screens/commons/custom_fab_list.dart';
 import 'package:tandamos/app/screens/commons/custom_floating_action_button.dart';
 import 'package:tandamos/app/screens/commons/custom_text_field.dart';
 import 'package:tandamos/app/screens/commons/tandamos_logo.dart';
@@ -46,7 +47,13 @@ class NewTandaPage extends StatelessWidget {
             ],
           ),
         ),
-        floatingActionButton: CustomFloatingActionButton(onPressed: () {}),
+        floatingActionButton: CustomFABList(
+          children: [
+            CustomFloatingActionButton(
+              onPressed: () {},
+            )
+          ],
+        ),
       ),
     );
   }
