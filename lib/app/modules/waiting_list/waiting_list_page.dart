@@ -34,13 +34,15 @@ class WaitingListPage extends StatelessWidget {
                   style: kP,
                 ),
                 k16Vertical,
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: SvgPicture.asset(
-                    'assets/imgs/manos-chocando.svg',
-                    // color: Colors.amber,
-                    placeholderBuilder: (BuildContext context) =>
-                        const Center(child: CircularProgressIndicator()),
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    child: SvgPicture.asset(
+                      'assets/imgs/grupo-neutro.svg',
+                      // color: Colors.amber,
+                      placeholderBuilder: (BuildContext context) =>
+                          const Center(child: CircularProgressIndicator()),
+                    ),
                   ),
                 ),
                 k16Vertical,
