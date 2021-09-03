@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:tandamos/app/screens/commons/primary_custom_button.dart';
 import 'package:tandamos/app/screens/commons/tandamos_logo.dart';
 import 'package:tandamos/app/screens/nueva_cuenta/widgets/custom_title.dart';
@@ -66,10 +67,9 @@ class ProtectedInformationLink extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          const Icon(
-            Icons.lightbulb_outline,
+          SvgPicture.asset(
+            'assets/icons/lightbulb.svg',
             color: kPrimaryMedium,
-            size: 32,
           ),
           k16Horizontal,
           Flexible(

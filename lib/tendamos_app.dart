@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/app/modules/waiting_list/waiting_list_page.dart';
 import 'package:tandamos/app/theme/app_theme.dart';
+
+import 'app/modules/onboarding/onboarding_fallido_page.dart';
 
 class TendamosApp extends StatelessWidget {
   @override
@@ -10,7 +11,7 @@ class TendamosApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimary,
       ),
-      home: const WaitingListPage(),
+      home: const OnboardingFallidoPage(),
     );
   }
 }
