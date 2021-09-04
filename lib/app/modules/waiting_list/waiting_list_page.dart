@@ -30,7 +30,12 @@ class WaitingListPage extends StatelessWidget {
                 ),
                 k24Vertical,
                 Text(
-                  'Somos una comunidad protegida que funciona por invitación.',
+                  'Somos una comunidad protegida donde los amigos de nuestros tanderos tienen prioridad.',
+                  style: kP,
+                ),
+                k16Vertical,
+                Text(
+                  'Para entrar no pedimos historial crediticio pero sí la invitación de un amigo.',
                   style: kP,
                 ),
                 k16Vertical,
@@ -44,11 +49,6 @@ class WaitingListPage extends StatelessWidget {
                           const Center(child: CircularProgressIndicator()),
                     ),
                   ),
-                ),
-                k16Vertical,
-                Text(
-                  'En Tandamos, los amigos de nuestros usuarios tienen acceso prioritario.',
-                  style: kP,
                 ),
                 k24Vertical,
                 PrimaryCustomButton(

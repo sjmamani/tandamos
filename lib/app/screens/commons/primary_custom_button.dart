@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-
-import '../../util/colors.dart';
+import 'package:tandamos/app/theme/app_theme.dart';
 
 class PrimaryCustomButton extends StatelessWidget {
   const PrimaryCustomButton({
     Key? key,
     required this.text,
-    this.color = primaryColor,
+    this.color = kPrimary,
     required this.onPressed,
     this.icon,
     this.fontSize = 20,
