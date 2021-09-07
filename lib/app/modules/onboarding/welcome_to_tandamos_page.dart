@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tandamos/app/screens/commons/primary_custom_button.dart';
-import 'package:tandamos/app/screens/commons/tandamos_logo.dart';
+import 'package:tandamos/app/screens/commons/tandamos_app_bar.dart';
 import 'package:tandamos/app/theme/app_theme.dart';
 
 class WelcomeToTandamosPage extends StatelessWidget {
@@ -44,16 +44,6 @@ class WelcomeToTandamosPage extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-
-  PreferredSize tandamosAppBar() {
-    return const PreferredSize(
-      preferredSize: Size.fromHeight(40),
-      child: Padding(
-        padding: EdgeInsets.only(left: 20),
-        child: TandamosLogo(),
       ),
     );
   }
