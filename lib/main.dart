@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/tendamos_app.dart';
+import 'package:tandamos/tandamos_app.dart';
 
 void main() {
-  runApp(TendamosApp());
+  runApp(TandamosApp());
 }
