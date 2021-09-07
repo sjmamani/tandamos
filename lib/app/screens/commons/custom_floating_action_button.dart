@@ -21,6 +21,7 @@ class CustomFloatingActionButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
+            heroTag: null,
             onPressed: onPressed,
             backgroundColor: kC,
             elevation: 0,
