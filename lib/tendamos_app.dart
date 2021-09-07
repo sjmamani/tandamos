@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/app/modules/waiting_list/conseguir_invitacion_page.dart';
-import 'package:tandamos/app/modules/waiting_list/local_widgets/yellow_waiting_list_scaffold.dart';
+import 'package:tandamos/app/modules/onboarding/welcome_to_tandamos_page.dart';
 import 'package:tandamos/app/theme/app_theme.dart';
 
 class TendamosApp extends StatelessWidget {
@@ -11,7 +10,7 @@ class TendamosApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimary,
       ),
-      home: const YellowWaitingListScaffold(content: ConseguirInvitacionPage()),
+      home: const WelcomeToTandamosPage(),
     );
   }
 }
