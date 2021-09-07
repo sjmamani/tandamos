@@ -15,46 +15,61 @@ class NewTandaHeader extends StatelessWidget {
       children: [
         Row(
           children: [
-            CustomColorBox(
-              page: page,
-              breakpointPage: 1,
-              color: kBlue,
-              height: 120,
-              width: size.width / 3,
-              child: Text('Unitanda'),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: CustomColorBox(
+                page: page,
+                breakpointPage: 1,
+                color: kBlue,
+                height: (size.width - 32) / 3,
+                width: (size.width - 32) / 3,
+                child: Text('Unitanda'),
+              ),
             ),
-            CustomColorBox(
-                page: page,
-                breakpointPage: 2,
-                color: kGreen,
-                height: 120,
-                width: size.width / 3,
-                child: Text('Aportaré')),
-            CustomColorBox(
-                page: page,
-                breakpointPage: 3,
-                color: kPink,
-                height: 120,
-                width: size.width / 3,
-                child: Text('Durante')),
+            Padding(
+              padding: const EdgeInsets.only(right: 8),
+              child: CustomColorBox(
+                  page: page,
+                  breakpointPage: 2,
+                  color: kGreen,
+                  height: (size.width - 32) / 3,
+                  width: (size.width - 32) / 3,
+                  child: Text('Aportaré')),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 8),
+              child: CustomColorBox(
+                  page: page,
+                  breakpointPage: 3,
+                  color: kPink,
+                  height: (size.width - 32) / 3,
+                  width: (size.width - 32) / 3,
+                  child: Text('Durante')),
+            ),
           ],
         ),
         Column(
           children: [
-            CustomColorBox(
-                page: page,
-                breakpointPage: 4,
-                color: kYellow,
-                height: 95,
-                width: size.width,
-                child: Text('Número')),
-            CustomColorBox(
-                page: page,
-                breakpointPage: 4,
-                color: kC,
-                height: 70,
-                width: size.width,
-                child: Text('Recibirás')),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CustomColorBox(
+                  page: page,
+                  breakpointPage: 4,
+                  color: kYellow,
+                  height: ((size.width - 32) / 3) / 2,
+                  width: size.width,
+                  child: Text('Número')),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: CustomColorBox(
+                  page: page,
+                  breakpointPage: 4,
+                  color: kC,
+                  height: ((size.width - 32) / 3) / 2,
+                  width: size.width,
+                  child: Text('Recibirás')),
+            ),
           ],
         ),
       ],
@@ -89,10 +104,6 @@ class CustomColorBox extends StatelessWidget {
         width: width,
         decoration: BoxDecoration(
           color: color,
-          border: Border.all(
-            color: Colors.white,
-            width: borderWidth,
-          ),
         ),
         child: child,
       ),
