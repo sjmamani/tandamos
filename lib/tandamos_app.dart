@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/app/modules/ayuda/necesitas_ayuda_page.dart';
+import 'package:tandamos/app/modules/pago/metodo_pago_dialog.dart';
 import 'package:tandamos/app/theme/app_theme.dart';
 
 class TandamosApp extends StatelessWidget {
@@ -10,7 +10,7 @@ class TandamosApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimary,
       ),
-      home: const NecesitasAyudaPage(),
+      home: const MetodoPagoDialog(),
     );
   }
 }
