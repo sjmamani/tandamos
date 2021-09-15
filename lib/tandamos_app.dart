@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/app/modules/onboarding/verificando_identidad_dialog.dart';
-import 'package:tandamos/app/screens/no_tanda/no_tanda_screen.dart';
+import 'package:tandamos/app/modules/ayuda/necesitas_ayuda_page.dart';
 import 'package:tandamos/app/theme/app_theme.dart';
 
 class TandamosApp extends StatelessWidget {
@@ -11,7 +10,7 @@ class TandamosApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimary,
       ),
-      home: const VerificandoIdentidadDialog(),
+      home: const NecesitasAyudaPage(),
     );
   }
 }
