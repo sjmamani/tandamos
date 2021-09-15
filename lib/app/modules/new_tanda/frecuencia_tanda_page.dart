@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tandamos/app/modules/new_tanda/aporte_tanda_page.dart';
-import 'package:tandamos/app/screens/commons/custom_fab_list.dart';
+import 'package:tandamos/app/screens/commons/custom_fab_nav_bar.dart';
 import 'package:tandamos/app/screens/commons/custom_floating_action_button.dart';
 import 'package:tandamos/app/screens/commons/tandamos_app_bar.dart';
 
@@ -24,8 +24,8 @@ class FrecuenciaTandaPage extends StatelessWidget {
             ),
           ],
         ),
-        floatingActionButton: CustomFABList(
-          children: [
+        bottomNavigationBar: CustomFabNavBar(
+          buttons: [
             CustomFloatingActionButton(
               onPressed: () => Navigator.push(
                 context,

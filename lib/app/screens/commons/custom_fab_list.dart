@@ -13,7 +13,8 @@ class CustomFABList extends StatelessWidget {
 
   final List<CustomFloatingActionButton> children;
 
-  /// Just if there is only one CustomFloatingActionButton in the children array
+  /// Only if there is one CustomFloatingActionButton in the children array.
+  /// Otherwise, this property will be ignored
   final MainAxisAlignment mainAxisAlignment;
 
   @override

@@ -16,7 +16,7 @@ class CustomFloatingActionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -31,7 +31,7 @@ class CustomFloatingActionButton extends StatelessWidget {
               size: 48,
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           Text(
             text,
             style: const TextStyle(letterSpacing: 1),
