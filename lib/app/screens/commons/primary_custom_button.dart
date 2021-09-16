@@ -6,7 +6,7 @@ class PrimaryCustomButton extends StatelessWidget {
     Key? key,
     required this.text,
     this.color = kPrimary,
-    required this.onPressed,
+    this.onPressed,
     this.icon,
     this.fontSize = 20,
     this.height = 50,
@@ -19,7 +19,7 @@ class PrimaryCustomButton extends StatelessWidget {
   final Icon? icon;
   final double height;
   final double width;
-  final Function() onPressed;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {

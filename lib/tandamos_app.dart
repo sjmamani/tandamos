@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tandamos/app/screens/user_dashboard/cancelamos_unitanda_page.dart';
+import 'package:tandamos/app/modules/contacts_invite/contacts_invite_page.dart';
 import 'package:tandamos/app/theme/app_theme.dart';
 
 class TandamosApp extends StatelessWidget {
@@ -10,7 +10,7 @@ class TandamosApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimary,
       ),
-      home: const CancelamosUnitandaPage(),
+      home: const ContactsInvitePage(),
     );
   }
 }

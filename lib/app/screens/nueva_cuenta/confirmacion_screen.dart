@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:tandamos/app/screens/commons/custom_floating_action_button.dart';
 
 class ConfirmacionScreen extends StatelessWidget {
@@ -33,10 +34,7 @@ class ConfirmacionScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold, fontSize: 24),
                 ),
               ),
-              const Icon(
-                Icons.sentiment_very_satisfied_outlined,
-                size: 64,
-              ),
+              SvgPicture.asset('assets/icons/excited.svg'),
               Padding(
                 padding: const EdgeInsets.only(top: 50),
                 child: Text(
